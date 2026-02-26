@@ -44,7 +44,7 @@ export default function HomePage() {
                 }}
                 className="bg-transparent border-2 border-gray-600 hover:border-gray-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors w-fit"
               >
-                See How It Works
+                See our work 
               </button>
             </div>
           </div>
