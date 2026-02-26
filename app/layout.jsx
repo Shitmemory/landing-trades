@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Saves time',
+  title: 'Saves Time',
   description: 'Automated software that filters serious jobs only. Stop missing enquiries and reduce time spent on admin work.',
 }
 
