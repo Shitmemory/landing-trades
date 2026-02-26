@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Saves Time',
+  title: 'Gledli',
   description: 'Automated software that filters serious jobs only. Stop missing enquiries and reduce time spent on admin work.',
 }
 
