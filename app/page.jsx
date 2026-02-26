@@ -178,7 +178,7 @@ export default function HomePage() {
                 </p>
                 <p className="flex items-start gap-2">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 text-green-500" />
-                  <span>AI handles the tyre kickers. You handle the work.</span>
+                  <span>Our system handles the tyre kickers. You handle the work.</span>
                 </p>
               </div>
             </div>
