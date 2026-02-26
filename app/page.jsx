@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   XCircle,
   ArrowRight,
+  Mail,
 } from 'lucide-react'
 
 export default function HomePage() {
@@ -399,9 +400,10 @@ export default function HomePage() {
           </h2>
           <a
             href="mailto:will@gledli.com"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-safety-orange hover:bg-orange-600 text-white font-semibold text-lg transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-safety-orange hover:bg-orange-600 text-white font-semibold text-lg transition-colors"
           >
-            Email us
+            <span>Email us</span>
+            <Mail className="w-5 h-5" />
           </a>
         </div>
       </section>
