@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import Link from 'next/link'
 import {
   Filter,
@@ -13,6 +14,57 @@ import {
   ArrowRight,
   Mail,
 } from 'lucide-react'
+
+function VideoPreview({ src }) {
+  const videoRef = React.useRef(null)
+  const [flashIcon, setFlashIcon] = React.useState('play')
+
+  const handleClick = () => {
+    const video = videoRef.current
+    if (!video) return
+
+    if (video.paused) {
+      video.currentTime = 0
+      void video.play()
+      setFlashIcon('play')
+    } else {
+      video.pause()
+      setFlashIcon('pause')
+    }
+
+    // Hide icon almost immediately after click
+    window.setTimeout(() => setFlashIcon(null), 120)
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      className="relative block w-full h-full focus:outline-none"
+    >
+      <video
+        ref={videoRef}
+        className="w-full h-full object-contain"
+        src={src}
+        muted
+        playsInline
+      />
+      {flashIcon && (
+        <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          {flashIcon === 'play' ? (
+            <span className="inline-block h-12 w-12 rounded-full bg-black/70 text-white text-xl leading-[3rem] text-center">
+              ▶
+            </span>
+          ) : (
+            <span className="inline-block h-12 w-12 rounded-full bg-black/70 text-white text-xl leading-[3rem] text-center">
+              ❚❚
+            </span>
+          )}
+        </span>
+      )}
+    </button>
+  )
+}
 
 export default function HomePage() {
   return (
@@ -336,7 +388,7 @@ export default function HomePage() {
                 “We already follow up.”
               </p>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                That is good. The difference is whether the first reply happens
+                The difference is whether the first reply happens
                 in minutes or later on. Speed changes the dynamic, especially
                 when customers are comparing options.
               </p>
@@ -348,7 +400,7 @@ export default function HomePage() {
                 “We do not miss enquiries.”
               </p>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                It is rarely about missing them completely. It is about what
+                It's rarely about missing them completely but about what
                 happens in the gap before you respond. That window is often
                 where jobs drift elsewhere.
               </p>
@@ -361,8 +413,8 @@ export default function HomePage() {
               </p>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                 Most admins are already stretched. This handles the full
-                interaction and filters out time wasters, so they only step in
-                when it is a serious enquiry.
+                interaction and filters out time wasters, so you only step in
+                when it's a genuine enquiry.
               </p>
             </div>
 
@@ -481,29 +533,13 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
               <div className="aspect-video bg-gray-900">
-                <video
-                  className="w-full h-full object-contain"
-                  src="/screen-recording.mov"
-                  controls
-                  playsInline
-                  preload="metadata"
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <VideoPreview src="/screen-recording.mov" />
               </div>
             </div>
 
             <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
               <div className="aspect-video bg-gray-900">
-                <video
-                  className="w-full h-full object-contain"
-                  src="/screen-recording-2.mov"
-                  controls
-                  playsInline
-                  preload="metadata"
-                >
-                  Your browser does not support the video tag.
-                </video>
+                <VideoPreview src="/screen-recording-2.mov" />
               </div>
             </div>
           </div>
