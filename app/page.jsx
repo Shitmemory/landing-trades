@@ -46,7 +46,7 @@ function VideoPreview({ src }) {
         ref={videoRef}
         className="w-full h-full object-contain"
         src={src}
-        muted
+      
         playsInline
       />
       {flashIcon && (
@@ -97,7 +97,7 @@ export default function HomePage() {
                 }}
                 className="bg-transparent border-2 border-gray-600 hover:border-gray-500 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors w-fit"
               >
-                See our work 
+                See how it works 
               </button>
             </div>
           </div>
@@ -527,19 +527,13 @@ export default function HomePage() {
       <section id="see-it-in-action" className="px-4 py-20 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-            Our Work
+            See how it works
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="max-w-4xl mx-auto">
             <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
               <div className="aspect-video bg-gray-900">
-                <VideoPreview src="/screen-recording.mov" />
-              </div>
-            </div>
-
-            <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
-              <div className="aspect-video bg-gray-900">
-                <VideoPreview src="/screen-recording-2.mov" />
+                <VideoPreview src="/Demo-2.mp4" />
               </div>
             </div>
           </div>
