@@ -61,7 +61,7 @@ export default function HomePage() {
             The System That Protects Your Time
           </h2>
           <p className="text-center text-gray-400 mb-12 text-lg">
-            Stop quoting at 9pm instead of switching off
+         
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -144,140 +144,260 @@ export default function HomePage() {
 
       <hr className="border-gray-800 max-w-6xl mx-auto" />
 
-      {/* Value Proposition Table */}
+      {/* Value Proposition Section */}
       <section className="px-4 py-20 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Us vs. The Old Way
           </h2>
 
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-gray-700">
-                  <th className="text-left py-4 px-6 text-gray-400 font-semibold" />
-                  <th className="text-left py-4 px-6 text-gray-400 font-semibold">
-                    The Old Way
-                  </th>
-                  <th className="text-left py-4 px-6 text-safety-orange font-semibold">
-                    Our Way
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
-                  <td className="py-4 px-6 text-white font-medium">
-                    Conversion Rate
-                  </td>
-                  <td className="py-4 px-6 text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      <span>
-                        7 out of 10 calls go nowhere, but still eat your time
-                      </span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span>Only serious jobs reach your phone</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
-                  <td className="py-4 px-6 text-white font-medium">
-                    Admin Time
-                  </td>
-                  <td className="py-4 px-6 text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      <span>Quoting at 9pm instead of switching off</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span>
-                        AI handles the tyre kickers. You handle the work.
-                      </span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
-                  <td className="py-4 px-6 text-white font-medium">
-                    Response Time
-                  </td>
-                  <td className="py-4 px-6 text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      <span>Missed emails, delayed replies</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span>5 minute response times</span>
-                    </div>
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-800/50 transition-colors">
-                  <td className="py-4 px-6 text-white font-medium">
-                    Lead Quality
-                  </td>
-                  <td className="py-4 px-6 text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <XCircle className="w-5 h-5 text-red-500" />
-                      <span>Wasting time on small stuff</span>
-                    </div>
-                  </td>
-                  <td className="py-4 px-6 text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
-                      <span>Sorted before you pick up the phone</span>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          {/* Mobile: stacked cards */}
+          <div className="space-y-6 md:hidden">
+            <div className="rounded-lg border border-gray-800 bg-gray-900 p-5">
+              <h3 className="text-white font-semibold mb-3">Conversion Rate</h3>
+              <div className="flex flex-col gap-2 text-sm text-gray-300">
+                <p className="flex items-start gap-2">
+                  <XCircle className="mt-0.5 h-4 w-4 text-red-500" />
+                  <span>
+                    A lot of calls can go nowhere, but still eat your time.
+                  </span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-green-500" />
+                  <span>Only serious jobs reach your phone.</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-gray-800 bg-gray-900 p-5">
+              <h3 className="text-white font-semibold mb-3">Admin Time</h3>
+              <div className="flex flex-col gap-2 text-sm text-gray-300">
+                <p className="flex items-start gap-2">
+                  <XCircle className="mt-0.5 h-4 w-4 text-red-500" />
+                  <span>Quoting at 9pm instead of switching off.</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-green-500" />
+                  <span>AI handles the tyre kickers. You handle the work.</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-gray-800 bg-gray-900 p-5">
+              <h3 className="text-white font-semibold mb-3">Response Time</h3>
+              <div className="flex flex-col gap-2 text-sm text-gray-300">
+                <p className="flex items-start gap-2">
+                  <XCircle className="mt-0.5 h-4 w-4 text-red-500" />
+                  <span>Missed emails, delayed replies.</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-green-500" />
+                  <span>5 minute response times.</span>
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-gray-800 bg-gray-900 p-5">
+              <h3 className="text-white font-semibold mb-3">Lead Quality</h3>
+              <div className="flex flex-col gap-2 text-sm text-gray-300">
+                <p className="flex items-start gap-2">
+                  <XCircle className="mt-0.5 h-4 w-4 text-red-500" />
+                  <span>Wasting time on small stuff.</span>
+                </p>
+                <p className="flex items-start gap-2">
+                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-green-500" />
+                  <span>Sorted before you pick up the phone.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: original table */}
+          <div className="hidden md:block">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-gray-700">
+                    <th className="text-left py-4 px-6 text-gray-400 font-semibold" />
+                    <th className="text-left py-4 px-6 text-gray-400 font-semibold">
+                      The Old Way
+                    </th>
+                    <th className="text-left py-4 px-6 text-safety-orange font-semibold">
+                      Our Way
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
+                    <td className="py-4 px-6 text-white font-medium">
+                      Conversion Rate
+                    </td>
+                    <td className="py-4 px-6 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <XCircle className="w-5 h-5 text-red-500" />
+                        <span>
+                          A lot of calls can go nowhere, but still eat your time
+                        </span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <span>Only serious jobs reach your phone</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
+                    <td className="py-4 px-6 text-white font-medium">
+                      Admin Time
+                    </td>
+                    <td className="py-4 px-6 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <XCircle className="w-5 h-5 text-red-500" />
+                        <span>Quoting at 9pm instead of switching off</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <span>
+                          AI handles the tyre kickers. You handle the work.
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-800 hover:bg-gray-800/50 transition-colors">
+                    <td className="py-4 px-6 text-white font-medium">
+                      Response Time
+                    </td>
+                    <td className="py-4 px-6 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <XCircle className="w-5 h-5 text-red-500" />
+                        <span>Missed emails, delayed replies</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <span>5 minute response times</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="hover:bg-gray-800/50 transition-colors">
+                    <td className="py-4 px-6 text-white font-medium">
+                      Lead Quality
+                    </td>
+                    <td className="py-4 px-6 text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <XCircle className="w-5 h-5 text-red-500" />
+                        <span>Wasting time on small stuff</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle2 className="w-5 h-5 text-green-500" />
+                        <span>Sorted before you pick up the phone</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </section>
 
       <hr className="border-gray-800 max-w-6xl mx-auto" />
 
-      {/* Time Cost Section */}
+      {/* Objection Handling Section */}
       <section className="px-4 py-20 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
-            The Math That Hurts
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+            Why would I need this?
           </h2>
 
-          <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
-            <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
-              <p>
-                If you quote{' '}
-                <span className="text-white font-semibold">5 jobs a day</span>
+          <div className="space-y-8">
+            {/* Objection 1 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “I reply at the end of the day.”
               </p>
-              <p>
-                and{' '}
-                <span className="text-white font-semibold">3 go nowhere</span>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                By then, they have usually spoken to a few other firms. The
+                first organised reply tends to set the tone. This simply makes
+                sure no genuine enquiry sits waiting for hours while you are on
+                site.
               </p>
-              <p>
-                that&apos;s{' '}
-                <span className="text-safety-orange font-semibold">
-                  about 1 to 2 hours a day lost
-                </span>
+            </div>
+
+            {/* Objection 2 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “We already follow up.”
               </p>
-              <p className="pt-4 border-t border-gray-700">
-                ={' '}
-                <span className="text-safety-orange font-semibold">
-                  6 to 10 hours a week
-                </span>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                That is good. The difference is whether the first reply happens
+                in minutes or later on. Speed changes the dynamic, especially
+                when customers are comparing options.
               </p>
-              <p className="text-xl text-white font-semibold pt-2">
-                ={' '}
-                <span className="text-red-400">1 full working day burned</span>{' '}
-                on nothing
+            </div>
+
+            {/* Objection 3 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “We do not miss enquiries.”
+              </p>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                It is rarely about missing them completely. It is about what
+                happens in the gap before you respond. That window is often
+                where jobs drift elsewhere.
+              </p>
+            </div>
+
+            {/* Objection 4 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “My wife or admin handles it.”
+              </p>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                Most admins are already stretched. This handles the full
+                interaction and filters out time wasters, so they only step in
+                when it is a serious enquiry.
+              </p>
+            </div>
+
+            {/* Objection 5 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “We are busy already.”
+              </p>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                Busy does not always mean working on the right jobs. Filtering
+                early means your time goes towards better fit enquiries, not
+                just more of them.
+              </p>
+            </div>
+
+            {/* Objection 6 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “We do not get many enquiries.”
+              </p>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                Which makes each one more valuable. If you only get a handful a
+                week, losing even one because someone replied faster stings
+                more.
+              </p>
+            </div>
+
+            {/* Objection 7 */}
+            <div className="rounded-lg border border-gray-700 bg-gray-900 p-6">
+              <p className="text-white font-semibold mb-2">
+                “I do not want something over complicated.”
+              </p>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                This runs quietly in the background and simply improves response
+                speed and qualification. You still make the decisions.
               </p>
             </div>
           </div>
