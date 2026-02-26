@@ -373,11 +373,16 @@ export default function HomePage() {
             </div>
 
             <div className="bg-gray-800 rounded-lg border border-gray-700 overflow-hidden">
-              <div className="aspect-video bg-gray-900 flex items-center justify-center">
-                <div className="text-gray-500 text-center p-8">
-                  <p className="text-sm mb-2">Video Example 2</p>
-                  <p className="text-xs">Insert your video embed here</p>
-                </div>
+              <div className="aspect-video bg-gray-900">
+                <video
+                  className="w-full h-full object-contain"
+                  src="/screen-recording-2.mov"
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -388,10 +393,16 @@ export default function HomePage() {
 
       {/* Final CTA Section */}
       <section className="px-4 py-20 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Stop quoting at 9pm. Start protecting your time.
+            Need more info?
           </h2>
+          <a
+            href="mailto:will@gledli.com"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-safety-orange hover:bg-orange-600 text-white font-semibold text-lg transition-colors"
+          >
+            Email us
+          </a>
         </div>
       </section>
 
@@ -399,7 +410,7 @@ export default function HomePage() {
       <footer className="px-4 py-12 lg:px-8 border-t border-gray-800">
         <div className="max-w-6xl mx-auto text-center text-gray-500 text-sm">
           <p>
-            &copy; 2026 Gledli. Built for UK tradespeople who value their time.
+            &copy; 2025 Gledli. Built for UK tradespeople who value their time.
           </p>
         </div>
       </footer>
